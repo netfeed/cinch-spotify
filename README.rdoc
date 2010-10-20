@@ -1,0 +1,18 @@
+= cinch-spotify
+
+A Spotify plugin for the IRC bot library Cinch.
+
+== Usage
+
+  bot = Cinch::Bot.new do
+    configure do |c|
+      c.nick = "Spotibot"
+      c.server = "irc.freenode.org"
+      c.channels = ["#cinch-bots"]
+      c.plugins.plugins = [Cinch::Plugins::Netfeed::Spotify]
+    end
+  end
+
+== Copyright
+
+Copyright (c) 2010 Victor Bergöö. See LICENSE for details.
