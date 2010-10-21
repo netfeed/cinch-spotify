@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cinch-spotify}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Bergoo"]
-  s.date = %q{2010-10-20}
+  s.date = %q{2010-10-21}
   s.default_executable = %q{cinch-spotify}
   s.description = %q{A spotify plugin for the Cinch IRC framework}
   s.email = %q{victor.bergoo@gmail.com}
@@ -18,11 +18,24 @@ Gem::Specification.new do |s|
     "LICENSE",
      "README.rdoc"
   ]
+  s.files = [
+    "LICENSE",
+     "README.rdoc",
+     "Rakefile",
+     "VERSION",
+     "bin/cinch-spotify",
+     "cinch-spotify.gemspec",
+     "lib/cinch-spotify.rb"
+  ]
   s.homepage = %q{http://github.com/netfeed/cinch-spotify}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
   s.rubygems_version = %q{1.3.7}
   s.summary = %q{Spotify plugin for the Cinch IRC framework}
+  s.test_files = [
+    "test/helper.rb",
+     "test/test_cinch-spotify.rb"
+  ]
 
   if s.respond_to? :specification_version then
     current_version = Gem::Specification::CURRENT_SPECIFICATION_VERSION
