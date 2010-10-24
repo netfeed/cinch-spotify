@@ -45,7 +45,7 @@ module Cinch
           artist = p.xpath("//xmlns:artist/xmlns:name").first.content
           album = p.xpath("//xmlns:album/xmlns:name").first.content
           track = p.xpath("//xmlns:track/xmlns:name").first.content
-          "Album: #{track} by #{artist} (#{album})"
+          "Track: #{track} by #{artist} (#{album})"
         end
 
         def _data spotify_uri
