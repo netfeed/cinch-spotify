@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{cinch-spotify}
-  s.version = "0.0.2"
+  s.version = "0.0.3"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Bergoo"]
-  s.date = %q{2010-10-24}
+  s.date = %q{2010-10-27}
   s.default_executable = %q{cinch-spotify}
   s.description = %q{A spotify plugin for the Cinch IRC framework}
   s.email = %q{victor.bergoo@gmail.com}
