@@ -51,7 +51,6 @@ module Cinch
         def _data spotify_uri
           client = HTTPClient.new
           resp = client.get("http://ws.spotify.com/lookup/1/", { :uri => spotify_uri })
-          puts resp.content
           resp.content
         end
       end
