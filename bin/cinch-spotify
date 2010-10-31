@@ -10,7 +10,7 @@ bot = Cinch::Bot.new do
   configure do |c|
     c.nick = "Spotibot"
     c.server = "irc.freenode.org"
-    c.channels = ["#cinch-bots"]
+    c.channels = ["#cinchbots"]
     c.plugins.plugins = [Cinch::Plugins::Netfeed::Spotify]
   end
 end
