@@ -4,7 +4,7 @@
 # This program is made available under the terms of the MIT License.
 
 require 'cinch'
-require 'nokogiri'
+require 'json'
 require 'httpclient'
 
 module Cinch
@@ -28,30 +28,30 @@ module Cinch
         end
 
         def _artist uri
-          p = Nokogiri::XML _data(uri)
-          artist = p.xpath("//xmlns:artist/xmlns:name").first.content
-          "Artist: #{artist}"
+          json = _lookup uri
+          name = json['artist']['name']
+          "Artist: #{name}"
         end
 
         def _album uri
-          p = Nokogiri::XML _data(uri)
-          artist = p.xpath("//xmlns:artist/xmlns:name").first.content
-          album = p.xpath("//xmlns:album/xmlns:name").first.content
+          json = _lookup uri 
+          artist = json['album']['artist']
+          album = json['album']['name']
           "Album: #{album} by #{artist}"
         end
 
         def _track uri
-          p = Nokogiri::XML _data(uri)
-          artist = p.xpath("//xmlns:artist/xmlns:name").first.content
-          album = p.xpath("//xmlns:album/xmlns:name").first.content
-          track = p.xpath("//xmlns:track/xmlns:name").first.content
+          json = _lookup uri
+          artist = json['track']['artists'].first['name']
+          album = json['track']['album']['name']
+          track = json['track']['name']
           "Track: #{track} by #{artist} (#{album})"
         end
 
-        def _data spotify_uri
+        def _lookup spotify_uri
           client = HTTPClient.new
-          resp = client.get("http://ws.spotify.com/lookup/1/", { :uri => spotify_uri })
-          resp.content
+          resp = client.get("http://ws.spotify.com/lookup/1/.json", { :uri => spotify_uri })
+          JSON.parse resp.content
         end
       end
     end

@@ -11,7 +11,7 @@ begin
     gem.homepage = "http://github.com/netfeed/cinch-spotify"
     gem.authors = ["Victor Bergoo"]
     gem.add_dependency "cinch"
-    gem.add_dependency "nokogiri"
+    gem.add_dependency "json"
     gem.add_dependency "httpclient"
   end
   Jeweler::GemcutterTasks.new
