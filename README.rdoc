@@ -13,6 +13,10 @@ A Spotify plugin for the IRC bot library Cinch.
     end
   end
 
+== Notice
+
+This product uses a SPOTIFY API but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trade mark of the Spotify Group.
+
 == Copyright
 
 Copyright (c) 2010 Victor Bergöö. See LICENSE for details.
