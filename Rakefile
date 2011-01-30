@@ -9,7 +9,7 @@ begin
     gem.email = "victor.bergoo@gmail.com"
     gem.homepage = "http://github.com/netfeed/cinch-spotify"
     gem.authors = ["Victor Bergoo"]
-    gem.files = ["lib/**/*.rb"]
+    gem.files = ["lib/**/*.rb", "README.rdoc", "LICENSE"]
     gem.add_dependency "cinch"
     gem.add_dependency "json"
     gem.add_dependency "curb"
