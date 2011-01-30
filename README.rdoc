@@ -19,6 +19,8 @@ The gem can be installed with:
       c.plugins.plugins = [Cinch::Plugins::Spotify]
     end
   end
+  
+  bot.start
 
 == Notice
 
