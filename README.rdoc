@@ -1,15 +1,22 @@
 = cinch-spotify
 
-A Spotify plugin for the IRC bot library Cinch.
+A Cinch plugin for the Spotify meta api.
+
+The gem can be installed with:
+
+  gem install cinch-spotify
 
 == Usage
+
+  require 'cinch'
+  require 'cinch/plugins/spotify'
 
   bot = Cinch::Bot.new do
     configure do |c|
       c.nick = "Spotibot"
       c.server = "irc.freenode.org"
-      c.channels = ["#cinch-bots"]
-      c.plugins.plugins = [Cinch::Plugins::Netfeed::Spotify]
+      c.channels = ["#cinchbots"]
+      c.plugins.plugins = [Cinch::Plugins::Spotify]
     end
   end
 

@@ -1,4 +1,3 @@
-require 'rubygems'
 require 'rake'
 
 begin
@@ -10,9 +9,10 @@ begin
     gem.email = "victor.bergoo@gmail.com"
     gem.homepage = "http://github.com/netfeed/cinch-spotify"
     gem.authors = ["Victor Bergoo"]
+    gem.files = ["lib/**/*.rb"]
     gem.add_dependency "cinch"
     gem.add_dependency "json"
-    gem.add_dependency "httpclient"
+    gem.add_dependency "curb"
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
