@@ -16,7 +16,6 @@ module Cinch
       match /((http|https):\/\/(open|play).spotify.com\/(album|track|artist)\/[a-zA-Z0-9]+)/, :method => :match_url, :use_prefix => false
 
       def match_url m, uri, protocol, sub, type
-        m.reply "bapp"
         execute m, uri, type
       end
 
