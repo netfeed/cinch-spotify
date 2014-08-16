@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 # -*- coding: utf-8 -*-
-# Copyright (c) 2010 Victor Bergöö
+# Copyright (c) 2010-2014 Victor Bergöö
 # This program is made available under the terms of the MIT License.
 
 require 'cinch'
@@ -13,8 +13,13 @@ module Cinch
       include Cinch::Plugin
       
       match /(spotify:(album|track|artist):[a-zA-Z0-9]+)/, :use_prefix => false
-      match /(http:\/\/open.spotify.com\/(album|track|artist)\/[a-zA-Z0-9]+)/, :use_prefix => false
-      
+      match /((http|https):\/\/(open|play).spotify.com\/(album|track|artist)\/[a-zA-Z0-9]+)/, :method => :match_url, :use_prefix => false
+
+      def match_url m, uri, protocol, sub, type
+        m.reply "bapp"
+        execute m, uri, type
+      end
+
       def execute m, uri, type
         msg = case type
         when /artist/ then _artist uri
