@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Victor Bergoo"]
-  s.date = %q{2011-01-30}
+  s.date = Time.now.strftime("%Y-%m-%d")
   s.description = %q{A spotify plugin for the Cinch IRC framework}
   s.email = %q{victor.bergoo@gmail.com}
   s.extra_rdoc_files = [
